@@ -43,6 +43,18 @@ div {
     margin: 10px;
 }
 
+.button {
+    font-size: 12pt;
+    color: #333;
+    border-radius: 4px;
+    background-color: #FAEBD7;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px #000;
+}
+
 table, th, td {
   border: 3px dotted black;
   border-collapse: collapse;

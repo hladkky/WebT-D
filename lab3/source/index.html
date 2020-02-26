@@ -5,7 +5,7 @@
     <title>HLADKKO</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <header>
@@ -32,8 +32,11 @@
     <h6 class="headers">Course:</h6>
     <i>2</i>
 
-    <table style="width:300px">
-        <thead><h3 style="margin-top: 20px;">Previous semester grades</h3></thead>
+    <div class="button-container">
+        <button class="button">Previous semester grades</button>
+    </div>
+
+    <table class="table" style="width:300px">
           <tr>
               <th>Lesson</th>
               <th>Grade</th>
@@ -63,6 +66,8 @@
               <td><b>98 A</b></td>
           </tr>
     </table>
+
+    <script src="js/script.js"></script>
 </div>
 <footer style="background-color: grey">
     <p class="footer"><var>Posted by: Yaroslav Hladkyi</var></p>
