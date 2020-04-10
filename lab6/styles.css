@@ -1,0 +1,125 @@
+body {
+  background: #D3DFA5;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 400%;
+  text-align: center;
+}
+
+.table-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+  margin: auto;
+  width: 70%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  float: left;
+  width: 33%;
+  height: 15vw;
+  text-align: center;
+}
+
+
+td:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.new_item {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+  position: fixed;
+  transform-style: preserve-3d;
+  animation: 1s appear ease-in;
+}
+
+
+.clear_item {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 50vw;
+  animation: 0.5s disappear linear;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.01) rotateY(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotateY(0deg);
+  }
+}
+
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.01);
+  }
+}
+
+
+.new_div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: grey;
+  opacity: 0.5;
+  animation: 0.5s show_div linear;
+}
+
+
+@keyframes show_div {
+  0% {
+    transform: scaleX(0.01);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+/* revert/restore properties on smaller screen */
+@media (max-width: 1400px) {
+    table {
+        width:100%;
+    }
+    td {
+        width:49%;
+        height:30vw;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    td {
+        width:100%;
+        height:50vw;
+    }
+}
