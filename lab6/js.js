@@ -3,14 +3,11 @@ class ImageGallery extends HTMLTableElement {
         super();
 
         var tr = document.createElement('tr');
-//        tr.style.height = "1400px";
         var imgsArray = this.getAttribute('imageList').split(";");
 
         for (var i = 0 ; i < imgsArray.length; i++)
         {
             var td = document.createElement('td');
-//            td.style.width = "33%";
-//            td.style.height = "70px";
 
             var img = document.createElement('img');
             img.src = imgsArray[i];
@@ -70,16 +67,6 @@ function mDown(obj) {
     new_item.setAttribute('height', "auto");
   }
 
-//  console.log((new_item.width * html_properties.height) / new_item.height <= html_properties.width)
-
-//  if (new_item.width / new_item.height < html_properties.width / html_properties.height ){
-//    console.log(html_properties.height);
-//  }
-//  else if (new_item.width > html_properties.width){
-//    new_item.width=html_properties.width;
-//    console.log(2);
-//  }
-
 
   new_div = document.createElement('div');
   new_div.setAttribute('class', 'new_div');
@@ -101,12 +88,3 @@ function remfunc(obj) {
   document.body.removeChild(div_to_clear);
   }, 500)
 }
-
-//const add = document.querySelector('.add');
-//
-//add.onclick = function() {
-//  // Create a custom square element
-//  square = document.createElement('div');
-//  square.setAttribute('class', 'new_item');
-//  document.body.appendChild(square);
-//};

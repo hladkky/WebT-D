@@ -25,6 +25,19 @@ body {
     color: SandyBrown;
 }
 
+.gallery_link {
+    font-size: 30px;
+    font-family: Consolas;
+    color: SandyBrown;
+}
+
+.gallery {
+    margin: 50px auto;
+    font-size: 30px;
+    font-family: Consolas;
+    color: SandyBrown;
+}
+
 div {
     padding: 10px;
     margin: 10px;
