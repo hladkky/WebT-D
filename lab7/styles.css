@@ -348,7 +348,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: start;
+  justify-content: center;
 }
 
 .aboutus h4 {

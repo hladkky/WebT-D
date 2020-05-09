@@ -1,0 +1,17 @@
+<div class="gallery">
+  <div class="gallery-box clearfix">
+    <div class="gallery-image-div"
+         *ngFor="let imgUrl of imagesArray; let i = index"
+         (load)="uploadedImgs.add(i)"
+         (error)="errorHandler(i)"
+         (click)="sendIdxFromArray(i)"
+         style="cursor: pointer">
+      <img class="gallery-image"
+           [src]="faildedIds.has(i) ? defaultUrl : imgUrl"/>
+      <div class="remove-image-div">
+        <span class="helper"></span>
+        <img src="https://img.icons8.com/officel/80/000000/remove-image.png"/>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<h1>Ukrainian Landscapes</h1>
+<div class="content">
+  <hr>
+  <div class="button-div">
+    <button id="toggle-button" (click)="toggleImages()">Show Slider</button>
+  </div>
+  <hr>
+
+  <div *ngIf="toggle; else showslider">
+    <app-image-gallery [imagesArray]="imagesArray"
+                       (messageEvent)="receiveMessage($event)">
+    </app-image-gallery>
+  </div>
+  <ng-template #showslider>
+    <app-image-slider [imagesArray]="imagesArray"></app-image-slider>
+  </ng-template>
+
+
+  <div>
+    <hr>
+    <h3>Add new image:</h3>
+    <div class="new-image-div">
+      <div class="input-div">
+        <h5>URL:</h5>
+        <input #inputUrl type="text" id="inputUrl"
+               (blur)="addImage(inputUrl.value); inputUrl.value='' ">
+      </div>
+      <button id="new-image-button"
+              (click)="addImage(inputUrl.value)"
+              >Update</button>
+    </div>
+    <hr>
+  </div>
+</div>
+<footer></footer>
